@@ -1,0 +1,707 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>DISLITBANGAL</title>
+	<meta name="google-site-verification" content="332Vx8c2eINrhOtzw0frvVtkQ-jd8FybspPX2eUSQ_4" />
+	<link rel="shortcut icon" href="./assets/logo_dislitbangal.ico" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+	<!--<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>-->
+    <link href="https://www.tnial.mil.id/lib/css/metro.css" rel="stylesheet" />
+    <link href="https://www.tnial.mil.id/lib/css/metro-icons.css" rel="stylesheet" />
+    <link href="https://www.tnial.mil.id/lib/css/metro-responsive.css" rel="stylesheet" />
+    <link href="https://www.tnial.mil.id/lib/css/metro-schemes.css" rel="stylesheet" />
+	
+    <link href="https://www.tnial.mil.id/lib/css/themes/default/easyui.css" rel="stylesheet" />
+    <link href="https://www.tnial.mil.id/lib/css/themes/icon.css" rel="stylesheet" />
+    <link href="https://www.tnial.mil.id/lib/css/themes/color.css" rel="stylesheet" />
+  	<link rel="stylesheet" href="https://www.tnial.mil.id/lib/css/bootstrap-4.3.1.css" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://www.tnial.mil.id/lib/js/jquery.min.js"></script>
+    <script src="https://www.tnial.mil.id/lib/js/metro.min.js"></script>
+    <!--<script src="https://www.tnial.mil.id/lib/js/bootstrap.min.js.map"></script>-->
+	
+    <script src="https://www.tnial.mil.id/lib/js/ga.js"></script>
+	
+    <script src="https://www.tnial.mil.id/lib/js/jquery.easyui.min.js"></script> 
+<style>
+	html,
+	body {
+		margin:0;
+		padding:0;
+		height:100%;
+		text-align: center; /* !!! */
+		background:url(https://www.tnial.mil.id/images/bg3.png) no-repeat center center fixed;
+		-webkit-background-size: 100% 100%;
+		-moz-background-size: 100% 100%;
+		-o-background-size: 100% 100%;
+		background-size: 100% 100%;	
+		font-family: 'OswaldRegular', Tahoma, sans-serif;			
+	}
+	
+	.container_gtranslate{
+     background-color:#ccc;
+     padding:0px;
+     text-align:right;
+   }
+	.app-bar.gray {
+		background-color: #ccc;
+		font-family: 'OswaldRegular', Tahoma, sans-serif;
+		color:#002e56;
+		display: block;
+	}	
+	td{
+		border: 0px solid #C3C3C3;
+	}	
+	.menux{
+		/*padding-top: 3px;*/
+	}
+	.app-bar {
+		position: static;
+	}	
+	.app-bar .app-bar-menu > li .d-menu li:not(.disabled):hover > a {
+		color: #fff;
+	}
+	.app-bar .app-bar-menu > li, .app-bar .app-bar-menu > li > a{
+		font-weight: bold;
+		line-height: 2.0rem;
+		height: 2.125rem;		
+		font-size: 17px;
+	}
+
+	.menux li a{
+		font-family: 'OswaldRegular', "Arial Narrow Bold", "Arial Narrow", Haettenschweiler, Helvetica, Arial, sans-serif;
+		color: #002e56;
+		display: block; 
+		outline: 0;
+		text-decoration: none;
+		text-transform: uppercase;
+		margin: 0px 5px 0px 5px;
+	}
+	.app-bar .app-bar-menu.small-dropdown .d-menu li > a{
+		padding:2px 2px 2px 10px;
+	}
+	.menux li:hover{
+		color: #fff;
+		background: #002e56;
+		text-decoration: none;
+	}
+	.menux li>a:hover{
+		color: #fff;
+		background: #002e56;
+		text-decoration: none;
+	}
+	.menux li ul li>a:hover{
+		color: #fff;
+		background: #002e56;
+		text-decoration: none;
+	}
+	.konten{
+		min-height: 300px;	
+	}
+	.headKonten{
+		width:100%;
+		padding: 5px 5px 0 5px;
+		font-size: 1em;
+		font-weight: bold;
+		color: rgb(102, 102, 102);
+		font-family: "OswaldRegular",Arial, "MS Trebuchet", sans-serif;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		margin-top: 10px;		
+		/*border-radius: 0px 80px 0px 0px;
+		text-shadow: 1px 1px #fff;
+		background: #ccc;*/
+/*		background: linear-gradient(#246BB2, #D1EAFC)  fixed;
+		background:-webkit-gradient(linear, left top, left bottom, from(#246BB2), to(#D1EAFC)) fixed;
+		background: -moz-linear-gradient(top, #246BB2, #D1EAFC) fixed; */		
+	}
+	.headKontenTw{
+		width:50%;padding: 10px;font-size: 15px;color: white;font-weight: bold;
+		border-radius: 0px 80px 0px 0px;
+		background: #54C2E9;
+	}
+	.headKontenIg{
+		width:50%;padding: 10px;font-size: 15px;color: #002e56;font-weight: bold;
+		border-radius: 0px 80px 0px 0px;
+		background: #ccc;
+		color:#000;
+	}
+	.headKontenYt{
+		width:50%;padding: 10px;font-size: 15px;color: #fff;font-weight: bold;
+		border-radius: 0px 80px 0px 0px;
+		background: #f00;
+	}
+	.clearKonten{
+		clear:both;
+	}
+	.borderKonten{
+		width:98%;height:auto;background-color:#fff;float:left;border:0px solid #D9E8ED;padding:10px;
+	}
+	.borderKontenTw{
+		width:98%;height:auto;background-color:#fff;float:left;border:1px solid #EBF1F3;padding:10px;
+	}
+	.borderKontenYt{
+		width:100%;height:auto;background-color:#fff;border:0px solid #f00;
+	}
+	.borderKontenIg{
+		width:98%;height:auto;background-color:#fff;float:left;border:1px solid #EBF1F3;padding:10px;
+	}
+	.borderKontenEmail{
+		width:98%;height:auto;background-color:#fff;float:left;border:1px solid #EAECED;
+	}
+	.linkMajalah:hover{
+		color:#f00;
+	}
+	.imgberitaTpu{
+		border:1px solid #ccc;
+		-webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+		width:98%;
+		height:200px
+	}
+	.imgberita{
+		border:1px solid #ccc;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+		width:90%;
+		height:130px
+	}
+	.imgberitaTb{
+		border:1px solid #ccc;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+		width:100%;
+		height:200px
+	}
+	.imgNewsMedia{
+		border:1px solid #ccc;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+		width:98%;
+		height:100px
+	}
+	.jdlBeritaKonten{
+		font-size: 1.6em;
+		text-transform:uppercase;
+		color:#003366;
+		font-weight: 500;
+		line-height: 1.3em;		
+		font-family: 'OswaldRegular', Tahoma, sans-serif;
+	}
+	.jdlBeritaKonten:hover{
+
+		text-decoration: underline;
+		color: #f00;
+	}
+	.jdlBeritaKonten:visited{
+		text-decoration: none;
+		color: #003366;
+	}
+	.isiBeritaKonten{
+		font-size:14px;
+		text-align:left;
+	}
+	.JdlPengumuman a, .JdlArtikel a{		
+		font-size:14px;	
+		color:#003366;
+		text-transform:uppercase;
+		padding-bottom:0px;
+		font-family: "OswaldRegular",Arial, "MS Trebuchet", sans-serif;
+	}
+	.JdlPengumuman:hover, .JdlArtikel:hover, .lainnya:hover{	
+		color:#003366;
+	}
+	#text-marquee{
+		font-size: 16px;
+	}
+	.text-light2{
+		color: #003366 !important;
+		font-weight: 300;
+		font-style: normal;
+		text-transform: uppercase;
+	}
+	.carousel-control-prev-icon {	
+		background-color: red;
+	}
+
+
+#navbar {
+  overflow: visible;
+}
+
+#navbar a {
+  display: block;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 1100px;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+</style>
+	
+</head>
+
+<body>
+
+	
+<div align="center">
+
+<div style="position: relative; z-index:1030;right: 0;left: 0;">	
+<header style="width: 1100px;background:#C3C3C3;height: 100%;border:0px solid #ccc">
+<!-- <div class="container_gtranslate">
+  <b>Bahasa</b>
+  <input type="radio" id="ind" class="lang-select" href="#googtrans(id|id)" data-lang="id" name="fav_language" >
+  <label for="ind">Indonesia</label>
+  <input type="radio" id="eng" class="lang-select" href="#googtrans(id|en)" data-lang="eng" name="fav_language" >
+  <label for="eng">English</label>
+</div> -->
+	<div  align="center" style="background: #001D36;position: relative;box-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.9) inset;">				
+		<img src='/assets/Bg1.png' style="width:100%;height;120px" />				
+	</div>
+
+	<div id="navbar">
+		<div align="center" class="menux">
+			<div class="app-bar gray">
+				<ul class="app-bar-menu">
+					<li><a href="https://www.tnial.mil.id/" style="margin-left:25px;">BERANDA</a></li>
+					<li><ul class="app-bar-menu small-dropdown">       
+						<li><a href="#" class="dropdown-toggle">Profil</a>
+
+							<ul class="d-menu" data-role="dropdown" data-no-close="true">                    
+
+								<li><a href="https://www.tnial.mil.id/visimisi/">Visi & Misi</a></li> 
+								<li><a href="https://www.tnial.mil.id/tugas/">Tugas TNI AL</a></li>  
+								<li><a href="https://www.tnial.mil.id/doktrin/">Doktrin TNI AL</a></li>  
+								<li><a href="https://www.tnial.mil.id/trisila/">Trisila TNI AL</a></li>  
+								<li><a href="https://www.tnial.mil.id/organisasi/">Struktur Organisasi</a></li>  
+								<li><a href="https://www.tnial.mil.id/jatidiri/">Jati Diri TNI</a></li>  
+								<li><a href="https://www.tnial.mil.id/saptamarga/">Sapta Marga</a></li>  
+								<li><a href="https://www.tnial.mil.id/sumpah/">Sumpah Prajurit</a></li>  
+								<li><a href="https://www.tnial.mil.id/8wajib/">8 Wajib TNI</a></li>  
+								<li><a href="https://www.tnial.mil.id/11azas/">11 Azas Kepemimpinan</a></li>  										
+								<li><a href="" class="dropdown-toggle">Sejarah</a>
+									<ul class="d-menu" data-role="dropdown" data-no-close="true">   
+										<li><a href="https://www.tnial.mil.id/sejarahtnial/">Sejarah TNI Angkatan Laut</a></li>  
+										<li><a href="https://www.tnial.mil.id/sejarahperanglaut/">Sejarah Perang Laut</a></li>  
+										<!--<li><a href="https://www.tnial.mil.id/tokoh/">Tokoh Besar Nusantara</a></li>  
+										<li><a href="https://www.tnial.mil.id/biografi/">Biografi</a></li>  
+										<li><a href="https://www.tnial.mil.id/musium/">Monumen & Museum</a></li> --> 
+									</ul>	
+								</li>											
+								<li><a href="" class="dropdown-toggle">Mars</a>
+									<ul class="d-menu" data-role="dropdown" data-no-close="true">   
+										<li><a href="https://www.tnial.mil.id/marstni/">Mars TNI</a></li>  
+										<li><a href="https://www.tnial.mil.id/marstnial/">Mars TNI AL</a></li>  
+										<li><a href="https://www.tnial.mil.id/marsmarinir/">Mars Marinir</a></li>  
+										<li><a href="https://www.tnial.mil.id/marsseskoal/">Mars Seskoal</a></li>  
+									</ul>	
+								</li>	  
+								<li><a href="https://www.tnial.mil.id/kepangkatan/">Kepangkatan TNI AL</a></li> 
+<!--								
+								<li><a href="" class="dropdown-toggle">Data Alutsista</a>
+									<ul class="d-menu" data-role="dropdown" data-no-close="true">  
+										<li><a href="https://www.tnial.mil.id/dewaruci/">DEWA RUCI</a></li>  
+										<li><a href="https://www.tnial.mil.id/kri/">KRI</a></li>  
+									</ul>	
+								</li>	
+-->
+							</ul>			
+
+						</li>         
+					</ul></li>
+					<li><ul class="app-bar-menu small-dropdown">       
+						<li><a href="" class="dropdown-toggle">Berita</a>
+							<ul class="d-menu" data-role="dropdown" data-no-close="true">  
+								<li><a href="https://www.tnial.mil.id/berita/">BERITA</a></li> 
+								<li><a href="https://www.tnial.mil.id/arsip/">ARSIP BERITA</a></li> 
+							</ul>			
+						</li>         
+					</ul>				
+					</li>
+					<!--<li><a href="https://www.tnial.mil.id/artikel/">Artikel</a></li>-->
+
+					
+					
+					<li><a href="https://www.tnial.mil.id/pengumuman/">Pengumuman</a></li>
+					<li><ul class="app-bar-menu small-dropdown">       
+						<li><a href="#" class="dropdown-toggle">Galeri</a>
+							<ul class="d-menu" data-role="dropdown" data-no-close="true">  
+								<li><a href="https://www.tnial.mil.id/galeri/">FOTO</a></li> 
+								<li><a href="https://www.tnial.mil.id/video/">VIDEO</a></li> 
+								<!--<li><a href="https://www.tnial.mil.id/videoprofil/">VIDEO PROFIL</a></li> -->
+								
+								<li><a href="" class="dropdown-toggle">VIDEO SATKER</a>
+								<ul class="d-menu" data-role="dropdown" data-no-close="true">   
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/1/">DISINFOLAHTAL</a></li>  
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/2/">DISPENAL</a></li> 
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/3/">AKADEMI ANGKATAN LAUT</a></li>
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/4/">SESKOAL</a></li>  
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/5/">PUSHIDROSAL</a></li> 
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/6/">PUSPOMAL</a></li>
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/7/">KOLINLAMIL</a></li>
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/8/">LANTAMAL X</a></li>
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/9/">KODIKLATAL</a></li>
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/10/">KOARMADA II</a></li>
+								</ul>	
+								</li>
+							</ul>			
+						</li>         
+					</ul></li>										
+
+					<li><ul class="app-bar-menu small-dropdown">       
+						<li><a href="#" class="dropdown-toggle">JAJARAN</a>
+							<ul class="d-menu" data-role="dropdown" data-no-close="true">  
+								<li><a href="https://www.tnial.mil.id/galeri/">FOTO</a></li> 
+								<li><a href="https://www.tnial.mil.id/video/">VIDEO</a></li> 
+								<!--<li><a href="https://www.tnial.mil.id/videoprofil/">VIDEO PROFIL</a></li> -->
+								
+								<li><a href="" class="dropdown-toggle">VIDEO SATKER</a>
+								<ul class="d-menu" data-role="dropdown" data-no-close="true">   
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/1/">DISINFOLAHTAL</a></li>  
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/2/">DISPENAL</a></li> 
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/3/">AKADEMI ANGKATAN LAUT</a></li>
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/4/">SESKOAL</a></li>  
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/5/">PUSHIDROSAL</a></li> 
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/6/">PUSPOMAL</a></li>
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/7/">KOLINLAMIL</a></li>
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/8/">LANTAMAL X</a></li>
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/9/">KODIKLATAL</a></li>
+									<li><a href="https://www.tnial.mil.id/videoprofilskr/10/">KOARMADA II</a></li>
+								</ul>	
+								</li>
+							</ul>			
+						</li>         
+					</ul></li>	
+					<li><a href="https://www.tnial.mil.id/links/">TAUTAN</a></li>
+					<li><a href="https://rekrutmen-tni.mil.id/">Rekrutmen</a></li>
+				</ul>
+			</div> 
+		</div>
+		 
+				
+		
+	</div>
+
+</header>	
+</div>
+</div>	
+	
+	
+	
+<div class="content" align="center" style="position: relative;padding-top:0">
+	<!-- <table border="0" style="width: 1100px;border-collapse: collapse;background:black;height: 100%;border:0px">
+		<tbody>		
+		<tr>
+			<td valign="middle">
+			<div id="content" class="easyui-panel" style="width:100%;" data-options="href:'https://www.tnial.mil.id/slider/',border:false"></div>
+						
+			</td>
+		</tr>
+	</table>		 -->
+	<table border="0" style="width: 1100px;border-collapse: collapse;background:white;height: 100%;border:0px">		
+		<tr>
+			<td valign="middle">
+
+
+<!-- <div style="padding:10px;">
+	<div id="text-marquee" class="easyui-panel" style="width:100%;" data-options="border:false">
+    <marquee direction="left" onmouseover="this.stop()" scrollamount="4" onmouseout="this.start()">
+        ⚓ DENGAN  SEMANGAT  JALESVEVA  JAYAMAHE  TNI  AL  SIAP  MEWUJUDKAN  NUSANTARA  BARU  INDONESIA  MAJU ⚓
+    </marquee>
+    </div>
+</div>	 -->
+
+<table align="center" class="ststkt" width="100%" border="0" style="margin-top:20px;">
+	<tbody>
+		<tr>
+			<td>
+				<h1 class="text-light2">&nbsp;SITUS TERKAIT <span class="mif-link"></span></h1>
+				<hr>
+			</td>
+		</tr>
+</table>
+<table align="center" class="ststkt" width="90%" border="0" style="margin-top:20px;">
+	<tbody>
+		<tr>
+			<td width="25%"><a target="_blank" href="https://koarmada-ri.tnial.mil.id">Koarmada RI</a></td>
+			<td width="25%"><a target="_blank" href="https://lantamal1-koarmada1.tnial.mil.id/">Lantamal I Belawan</a></td>
+			<td width="25%"><a target="_blank" href="https://diskumal.tnial.mil.id/">Diskumal</a></td>
+			<td width="25%"><a target="_blank" href="http://www.kemhan.go.id/">Kemhan</a></td>
+		</tr>
+		<tr>
+			<td><a target="_blank" href="https://koarmada1.tnial.mil.id">Koarmada I</a></td>
+			<td><a target="_blank" href="https://lantamal2-koarmada1.tnial.mil.id/">Lantamal II Padang</a></td>
+			<td><a target="_blank" href="https://dispsial.tnial.mil.id/">Dispsial</a></td>
+			<td><a target="_blank" href="http://www.tni.mil.id/">Mabes TNI</a></td>
+		</tr>
+		<tr>
+			<td><a target="_blank" href="https://koarmada2.tnial.mil.id/">Koarmada II</a></td>
+			<td><a target="_blank" href="https://lantamal3-koarmada1.tnial.mil.id/">Lantamal III Jakarta</a></td>
+			<td><a target="_blank" href="https://disopslatal.tnial.mil.id/">Disopslatal</a></td>
+			<td><a target="_blank" href="https://tniad.mil.id/">TNI AD</a></td>
+		</tr>
+		<tr>
+			<td><a target="_blank" href="https://koarmada3.tnial.mil.id/">Koarmada III</a></td>
+			<td><a target="_blank" href="https://lantamal4-koarmada1.tnial.mil.id/">Lantamal IV Batam</a></td>
+			<td><a target="_blank" href="https://disjarahal.tnial.mil.id/">Disjarahal</a></td>
+			<td><a target="_blank" href="http://tni-au.mil.id/">TNI AU</a></td>
+		</tr>
+		<tr>
+			<td><a target="_blank" href="https://kolinlamil.tnial.mil.id/">Kolinlamil</a></td>
+			<td><a target="_blank" href="https://lantamal5-koarmada2.tnial.mil.id/">Lantamal V Surabaya</a></td>
+			<td>&nbsp;</td>
+			<td><a target="_blank" href="https://bakamla.go.id/">Bakamla</a></td>
+		</tr>
+		<tr>
+			<td><a target="_blank" href="https://marinir.tnial.mil.id/">Kormar</a></td>
+			<td><a target="_blank" href="https://lantamal6-koarmada2.tnial.mil.id/">Lantamal VI Makasar</a></td>
+			<td>&nbsp;</td>
+			<td><a target="_blank" href="https://www.polri.go.id/">POLRI</a></td>
+		</tr>
+		<tr>
+		<td><a target="_blank" href="https://www.pushidrosal.id/">Pushidrosal</a></td>
+			<td><a target="_blank" href="https://lantamal7-koarmada2.tnial.mil.id/">Lantamal VII Kupang</a></td>
+			<td>&nbsp;</td>
+			<td><a target="_blank" href="http://www.dephub.go.id/"> Dephub</a></td>
+		</tr>
+		<tr>
+			<td><a target="_blank" href="https://kodiklatal.tnial.mil.id/">Kodiklatal</a></td>
+			<td><a target="_blank" href="https://lantamal8-koarmada2.tnial.mil.id/">Lantamal VIII Manado</a></td>
+			<td>&nbsp;</td>
+			<td><a target="_blank" href="https://www.bmkg.go.id/">BMKG</a></td>
+		</tr>
+		<tr>
+			<td><a target="_blank" href="https://puspomal.tnial.mil.id/">Puspomal</a></td>
+			<td><a target="_blank" href="https://lantamal9-koarmada3.tnial.mil.id/">Lantamal IX Ambon</a></td>
+			<td>&nbsp;</td>
+			<td><a target="_blank" href="http://yayasannala.or.id/">Yayasan Nala</a></td>
+		</tr>
+		<tr>
+			<td><a target="_blank" href="https://seskoal.ac.id/">Seskoal</a></td>
+			<td><a target="_blank" href="https://lantamal10-koarmada3.tnial.mil.id/">Lantamal X Jayapura</a></td>
+			<td>&nbsp;</td>
+			<td>
+				<a target="_blank" href="http://lpse.tnial.mil.id/eproc4">LPSE TNI AL</a>
+				<!-- <a target="_blank" href="http://www.yht.or.id:8080/">Yayasan Hangtuah</a> -->
+			</td>
+		</tr>
+		<tr>
+			<td><a target="_blank" href="http://www.aal.ac.id/">AAL</a></td>
+			<td><a target="_blank" href="https://lantamal11-koarmada3.tnial.mil.id/">Lantamal XI Merauke</a></td>
+			<td>&nbsp;</td>
+			<td>
+				<a target="_blank" href="http://sisinforb.tnial.mil.id">Reformasi Birokrasi TNI AL</a>
+				<!-- <a target="_blank" href="https://mnek.tnial.mil.id/">MNEK</a> -->
+			</td>
+
+		</tr>
+		<tr>
+			<td><a target="_blank" href="http://sttal.ac.id/">STTAL</a></td>
+			<td><a target="_blank" href="http://lantamal12-koarmada1.tnial.mil.id/">Lantamal XII Pontianak</a></td>
+			<td>&nbsp;</td>
+			<td>
+				<a target="_blank" href="https://ppid.tnial.mil.id/">PPID</a>
+				<!-- <a target="_blank" href="http://pusinfomar-tni.mil.id/">Pusinfomar</a> -->
+			</td>
+		</tr>
+		<tr>
+			<td><a target="_blank" href="http://jalasenastri.tnial.mil.id">Jalasenastri</a></td>
+			<td><a target="_blank" href="https://lantamal13-koarmada2.tnial.mil.id/">Lantamal XIII Tarakan</a></td>
+			<td>&nbsp;</td>
+			<td><a target="_blank" href="https://www.ppal.or.id/">PPAL</a></td>
+		</tr>
+		<tr>
+			<td><a target="_blank" href="https://puspenerbal.tnial.mil.id/">Puspenerbal</a></td>
+			<td><a target="_blank" href="https://lantamal14-koarmada3.tnial.mil.id/">Lantamal XIV Sorong</a></td>
+			<td>&nbsp;</td>
+			<td><a target="_blank" href="https://ladokgirem.com/">Ladokgi REM</a></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><a target="_blank" href="https://pasmar1.tnial.mil.id/">Pasmar 1</a></td>
+			<td>&nbsp;</td>
+			<td><a target="_blank" href="https://rsgm.ladokgirem.com/">RSGM Ladokgi REM</a></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><a target="_blank" href="https://pasmar2.tnial.mil.id/">Pasmar 2</a></td>
+			<td>&nbsp;</td>
+			<td><a target="_blank" href="https://rspaldrramelan.com/">RSAL Dr. Ramelan</a></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><a target="_blank" href="https://pasmar3.tnial.mil.id/">Pasmar 3</a></td>
+			<td>&nbsp;</td>
+			<td><a target="_blank" href="http://www.rsalmintohardjo.com/">RSAL Mintoharjo</a></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<!--  -->
+	
+				
+
+				
+				
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" height="200">
+				<!--
+				<img src="https://www.tnial.mil.id/images/footer.png" width="100%" />-->
+				<div align="center" style="font-size:13px;background-color:#E9ECF3;">	
+					
+					<div class="footers">
+						
+							<hr class="thin bg-grayLighter" /><br>
+                            <a href="http://www.tni.mil.id" target="_blank">
+                            <img alt="MABES TNI" src="https://www.tnial.mil.id/images/logo_tni.png" style="height:40px; width:40px">
+                            </a>&nbsp;    
+                            <a href="http://www.tnial.mil.id" target="_blank">
+                            <img alt="TNI AL" src="https://www.tnial.mil.id/images/logo_tnial.png" style="height:42px; width:40px">
+                            </a>&nbsp;                                                               
+                            <a href="http://www.tniau.mil.id" target="_blank">
+                            <img alt="TNI AU" src="https://www.tnial.mil.id/images/logo_tniau.png" style="height:40px; width:40px">
+                            </a>&nbsp;                    
+                            <a href="http://www.tniad.mil.id" target="_blank">
+                            <img alt="TNI AD" src="https://www.tnial.mil.id/images/logo_tniad.png" style="height:40px; width:35px">
+                            </a>  <br>
+                    </div><br>
+						
+					<strong>Copyright &copy; Tentara Nasional Indonesia Angkatan Laut</strong><br /><br />Komplek Militer Cilangkap, Cilangkap, Cipayung, Kota Jakarta Timur<br /> Daerah Khusus Ibukota Jakarta 13870<br /><br/>Kontak Kami:<br/> Email. dispenal@tnial.mil.id <br/>Telp. (021) 8723308<br />Hp. +6281382556085<br /> Fax. (021) 8710628<br /><br /><br />				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+	if(screen.width>950){
+		if (window.pageYOffset >= sticky) {
+		navbar.classList.add("sticky")
+		} else {
+		navbar.classList.remove("sticky");
+		}
+	}
+}
+</script>
+	
+<script type="text/javascript">
+function googleTranslateElementInit() {
+   new google.translate.TranslateElement({pageLanguage: 'id'}, 'google_translate_element');
+}
+function triggerHtmlEvent(element, eventName) {
+   var event;
+   if (document.createEvent) {
+     event = document.createEvent('HTMLEvents');
+     event.initEvent(eventName, true, true);
+     element.dispatchEvent(event);
+   } else {
+     event = document.createEventObject();
+     event.eventType = eventName;
+     element.fireEvent('on' + event.eventType, event);
+   }
+}
+$(document).ready(function(){
+   $(".lang-select").click(function(){
+     var theLang = $(this).attr('data-lang');
+     $(".goog-te-combo").val(theLang);
+     window.location = $(this).attr('href');
+     window.location.reload();
+   });
+});
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	
+</body>
+</html>
+
+
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+        if(screen.width>950){
+            if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+            } else {
+            navbar.classList.remove("sticky");
+            }
+        }
+    }
+</script>
+	
+<script type="text/javascript">
+function googleTranslateElementInit() {
+   new google.translate.TranslateElement({pageLanguage: 'id'}, 'google_translate_element');
+}
+function triggerHtmlEvent(element, eventName) {
+   var event;
+   if (document.createEvent) {
+     event = document.createEvent('HTMLEvents');
+     event.initEvent(eventName, true, true);
+     element.dispatchEvent(event);
+   } else {
+     event = document.createEventObject();
+     event.eventType = eventName;
+     element.fireEvent('on' + event.eventType, event);
+   }
+}
+$(document).ready(function(){
+   $(".lang-select").click(function(){
+     var theLang = $(this).attr('data-lang');
+     $(".goog-te-combo").val(theLang);
+     window.location = $(this).attr('href');
+     window.location.reload();
+   });
+});
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	
+</body>
+</html>
+
+
+<!-- <div class="mobile">mobile -->
+<!-- </div>
+<div class="desktop">dekstop -->
+
+<!-- </div> -->
